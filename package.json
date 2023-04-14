@@ -1,0 +1,21 @@
+{
+  "name": "mark-ts",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "concurrently npm:build:*",
+    "watch": "concurrently npm:watch:*",
+    "build:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./dist/css/app.css",
+    "build:js": "esbuild ./src/js/bootstrap.js --bundle --outfile=./dist/js/app.js",
+    "watch:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./dist/css/app.css --watch",
+    "watch:js": "esbuild ./src/js/bootstrap.js --bundle --outfile=./dist/js/app.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "alpinejs": "^3.12.0",
+    "concurrently": "^8.0.1",
+    "esbuild": "^0.17.16",
+    "tailwindcss": "^3.3.1"
+  }
+}
